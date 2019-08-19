@@ -1,0 +1,40 @@
+<div class="mine-view">
+	<div class="back-box">
+		<span class="back-img"></span>
+		<h2>修改地址</h2>
+		<span></span>
+	</div>
+	<section>
+		<form method="post" action="" name="form1">
+		<div class="address-div">
+			<ul>
+			<!-- <?php
+				if($address){
+					echo '<input type="hidden" id="id" value="'.$address[0]['id'].'">';
+				}
+			?> -->
+				<li><h3>收货人</h3><input type="text" name="uname" value=""></li>
+				<li><h3>联系电话</h3><input type="text" name="mobile" value=""></li>
+				<li><h3>所在地区</h3><input class="address-input" id="address-input" type="button" value=""><i></i></li>
+				<li><h3>街道信息</h3><input type="text" name="address" value=""></li>
+				<li><h3>邮政编码</h3><input type="text" name="zipcode" value=""></li>
+				<input type="hidden" id="province" name="province" value="">
+				<input type="hidden" id="city" name="city" value="">
+				<input type="hidden" id="district" name="district" value="">
+			</ul>
+		</div>
+		</form>
+		<div class="only-input-box">
+			<input type="submit" class="only-input" id="save_address" value="保存" />
+		</div>
+	</section>
+	<section class="address-wrap" style="display:none;">
+		<div class="address-cont">
+			<ul id="address-ul"></ul>
+		</div>
+		<div class="title">
+				<h3>选择</h3>
+				<a class="close" href="javascript:void(0)"></a>
+			</div>
+	</section>
+</div>

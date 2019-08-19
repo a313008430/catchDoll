@@ -1,0 +1,62 @@
+<div id="contentView" class="mine-view">
+    <div class="back-box">
+        <span class="back-img"></span>
+        <h2>订单选择</h2>
+        <span></span>
+    </div>
+    <section>
+        <!-- <div class="blank-top"></div> -->
+        <div style="padding:10px;">
+            <div class="address-info-box" style="margin:0;">
+                <!-- <a href="<?=site_url('User/address');?>">
+                    <p><span>收货人：<?=$address[0]['name'];?></span><em><?=$address[0]['mobile'];?></em></p>
+                    <h4>收货地址:<?=$address[0]['provinceId'];?><?=$address[0]['cityId'];?><?=$address[0]['districtId'];?><?=$address[0]['address'];?></h4>
+                    <i></i>
+                </a> -->
+            </div>
+        </div>
+        <div class="mine-list choose-list">
+            <ul class="clearfix">
+                <!-- <?php
+        if($toys){
+            foreach($toys as $cv){
+            ?>
+                    <li>
+                        <label data="<?=$cv['id']?>">
+                            <img src="<?=$cv['url']?>" />
+                            <input type="checkbox" name="ci1" id="">
+                            <i></i>
+                            <h3>
+                                <?=$cv['name']?>
+                                    <?php if($cv['name']==1){ echo '(已下单)'; }?>
+                            </h3>
+                            <time>
+                                <?php echo date("Y-m-d H:i:s", substr($cv['createTime'], 0, -3));?>
+                            </time>
+                        </label>
+                    </li>
+                    <?php
+            }
+        }else{
+            echo '<li>暂无娃娃!</li>';
+        }
+        ?> -->
+            </ul>
+        </div>
+        <div class="blank-bottom"></div>
+    </section>
+    <!-- <section class="fixed-box">
+        <div class="confirm-box clearfix">
+            <h2>已选择:&nbsp;
+                <em>0</em>/(2-5)</h2>
+            <a id="confirmOrder">确认发货</a>
+        </div>
+    </section> -->
+</div>
+<section class="fixed-box">
+    <div class="confirm-box clearfix">
+        <h2>已选择:&nbsp;
+            <em>0</em>/(2-5)</h2>
+        <a id="confirmOrder">确认发货</a>
+    </div>
+</section>

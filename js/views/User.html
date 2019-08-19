@@ -1,0 +1,47 @@
+<div id="contentView" class="mine-view">
+    <div class="back-box">
+        <span class="back-img"></span>
+        <h2>我的娃娃</h2>
+        <span></span>
+    </div>
+    <section class="mine-wrap">
+        <div class="user-box">
+            <div class="head-img">
+                <img id="head_img" src="" />
+                <i class="male"></i>
+            </div>
+            <p class="name">
+                <!-- <span>
+                </span> -->
+            </p>
+            <p>共抓娃娃中
+                <em id="mine_num">
+
+                </em>次</p>
+        </div>
+        <div class="shipments">
+            <a class="only-input" id="shipments" href="javascript:;">我要发货</a>
+        </div>
+        <div class="mine-list">
+            <ul class="clearfix" id="mine_list">
+                <!-- <?php
+					foreach($toys as $cv){
+					?>
+                    <li>
+                        <img src="<?=$cv['url']?>" />
+                        <h3>
+                            <?=$cv['name']?>
+                                <?php if($cv['status']==1){ echo '(已下单)'; }?>
+                        </h3>
+                        <time>
+                            <?php echo date("Y-m-d H:i:s", substr($cv['createTime'], 0, -3));?>
+                        </time>
+                    </li>
+                    <?php
+					}
+				?> -->
+            </ul>
+        </div>
+        <div class="blank-bottom"></div>
+    </section>
+</div>

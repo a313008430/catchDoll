@@ -1,0 +1,30 @@
+<div id="contentView" class="mine-view">
+    <div class="back-box">
+        <span class="back-img"></span>
+        <h2>我的娃娃币</h2>
+        <span></span>
+    </div>
+    <section>
+        <div style="padding:15px 0;text-align: center;">
+            <div class="gold-num"><em><img src="/public/img/gold.png" alt="">&nbsp;金币：</em><em id="gold_num"></em></div>
+            <div class="gold-num silver-num"><em><img src="/public/img/silver-gold.png" alt="">&nbsp;代币：</em><em id="silver_num"></em></div>
+        </div>
+        <ul class="record-list" id="record-list">
+            <!-- <?php
+            if($balance){
+                foreach($balance as $cv){
+            ?>
+                <li>
+                    <div class="info"><h3><?=$config['fee_type'][$cv['type']]?></h3><time><?php echo date("Y/m/d H:i:s", substr($cv['createTime'], 0, -3));?></time></div>
+                    <span class="<?=$config['fee_class'][$cv['type']]?>"><?=$config['fee_mark'][$cv['type']]?><?=$cv['amount'];?></span>
+                </li>
+            <?php
+            }
+            }else{
+                echo '<li>未消费!</li>';
+            }
+            ?> -->
+        </ul>
+        <!-- <div class="blank-bottom"></div> -->
+    </section>
+</div>

@@ -1,0 +1,87 @@
+<div id="contentView" class="index-view">
+    <div class="mineinfo-box flex_1">
+        <div class="flex_1" id="openLogin">
+            <i>
+                <img src="public/img/initial-head.png" alt="">
+            </i>注册/登录</div>
+        <div class="mineinfo flex_1" id="mineinfo" style="display:none;">
+            <i>
+                <img id="userIcon" src="" alt="">
+            </i>
+            <h1 id="userName">namnam名字</h1>
+        </div>
+        <!--<a class="glod-box flex_1 gold-giving" href="javascript:void(0);"><i class="silver-gold"></i><em id="userGoldGiving">0</em></a>-->
+        <a id="recharge" class="glod-box flex_1" href="javascript:void(0);">
+            <i></i>
+            <em id="userGold">0</em>
+            <span></span>
+        </a>
+    </div>
+    <!-- banner -->
+    <!-- <div class="banner" id="banner">
+        <ul class="banner_imgs clearfix" id="slidelist">
+            <li>
+                <a href="#">
+                    <img id="banner_img" src="" alt="">
+                </a>
+            </li>
+        </ul>
+        <div class="banner_index" id="slidelisti">
+        </div>
+    </div> -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper" id="slidelist">
+            <!-- <div class="swiper-slide"><a href="#"><img src="#" alt=""></a></div> -->
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <!--  -->
+    <section class="index-bg">
+        <div class="index-list">
+            <div class="div_lazy" style="display:none;"></div>
+            <ul class="clearfix" id="roomlist">
+                <!--li><a href=""><img src="<?=$config['pub_url'];?>images/banner.png" alt=""><h3>过于可爱的小萌物</h3><p><span class="state using"><i></i><em>游戏中</em></span><span class="pirce"><i></i><em>16</em>币/次</span></p></a></li>
+                <li><a href=""><img src="<?=$config['pub_url'];?>images/banner.png" alt=""><h3>过于可爱的小萌物</h3><p><span class="state using"><i></i><em>游戏中</em></span><span class="pirce"><i></i><em>16</em>币/次</span></p></a></li>
+                <li><a href=""><img src="<?=$config['pub_url'];?>images/list-1.png" data-original="<?=$config['pub_url'];?>images/banner.png" alt=""><h3>过于可爱的小萌物</h3><p><span class="state using"><i></i><em>游戏中</em></span><span class="pirce"><i></i><em>16</em>币/次</span></p></a></li>
+                <li><a href=""><img src="<?=$config['pub_url'];?>images/list-1.png" data-original="<?=$config['pub_url'];?>images/banner.png" alt=""><h3>过于可爱的小萌物</h3><p><span class="state using"><i></i><em>游戏中</em></span><span class="pirce"><i></i><em>16</em>币/次</span></p></a></li-->
+            </ul>
+        </div>
+        <div class="blank-bottom">
+
+        </div>
+    </section>
+    <div class="signin-box" style="display:none;">
+        <div class="content">
+            <div class="title-box">
+                <h2>每日签到</h2>
+                <i class="signin-close"></i>
+            </div>
+            <div class="content-box">
+                <div class="date-box">
+                    <div class="continuous-time">已经成功连续签到
+                        <em id="signCycle">0</em>天</div>
+                    <div class="gold-hint">
+                        <i class="signstar"></i>
+                        <p>+
+                            <span class="goldtoday">5</span>币</p>
+                        <i></i>
+                    </div>
+                    <div class="sign-list">
+                        <ul id="signin_box">
+                            <!--<li><div><i></i><p>+<em>5</em>币</p><span></span></div><p>第1天</p></li>-->
+                        </ul>
+                    </div>
+                    <a class="signin-btn" href="javascript:void(0);">签到</a>
+                    <i class="signstar star-1"></i>
+                    <i class="signstar star-2"></i>
+                    <i class="signstar star-3"></i>
+                    <!--<div class="signok" style="display:none;">签到成功!<br/>明天继续哦~</div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="notice_box" style="display:none;">
+        <div class="notice_box_content">
+        </div>
+    </div>
+</div>

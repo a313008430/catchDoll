@@ -1,0 +1,172 @@
+<div id="contentView" class="view-content grab-view">
+    <!--抓取界面-->
+    <div class="grab-wrap">
+        <div class="shoot-wrap">
+            <div id="shootBox" class="shoot-box" style="height: 10rem; position: relative;">
+                <canvas id="mpeg_video_main" class="mpeg_video_main"></canvas>
+                <div id="videoLoading" class="video-loading">
+                    <i>视频加载中...</i>
+                </div>
+                <!--聊天-->
+                <div id="chatView" class="chat-view">
+                    <ul></ul>
+                </div>
+            </div>
+            <a id="goListBtn" href="javascript:void(0);" class="goListBtn"></a>
+            <div id="currentPlayerView" class="now-person" style="opacity: 0;">
+                <span>name</span>
+                <img src="public/img/1.jpg" />
+            </div>
+            <div id="onlinePlayers" class="line-up">
+                <span>0人围观</span>
+                <!--<img src="<?=$config['pub_url'];?>img/1.jpg"/>-->
+            </div>
+            <!-- 控制视频角度 -->
+            <!-- <a class="shooting-angle" id="shooting-angle" ></a> -->
+        </div>
+        <!--聊天输入框-->
+        <div id="chatInputView" class="chat-input-view canSelect">
+            <div class="chatBox">
+                <div class="quickChat">
+                    <ul class="clearfix">
+                        <li>棒棒哒</li>
+                        <li>666</li>
+                        <li>让一让</li>
+                        <li>求开光</li>
+                        <li>放开我来</li>
+                        <li>超神</li>
+                        <li style="border:none;">赞</li>
+                    </ul>
+                </div>
+                <div class="tFlex tFlexAlign chatInput">
+                   <i></i>
+                <input id="chatInput" type="text" class="tFlexGrow canSelect" maxlength="15">
+                <div class="tFlexGrowZ chat-btn-view canSelect">
+                    <div id="sendChat" class="send-chat-btn">发送</div>
+                    <!--<div id="closeChat" class="send-chat-btn close-chat">close</div>-->
+                </div>
+                <!--<div class="tFlexGrowZ chat-btn-view canSelect">-->
+                <!---->
+                <!--</div>--> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bottomView" class="bottom-view">
+        <!--控制逻辑层-->
+        <div id="playWrap" class="play-wrap">
+            <div id="coinsView" class="state1" style="display:block;">
+                <a id="beginBtn" class="btn begin-btn" href="javascript:void(0);" style="display: none">
+                    <h3>开始抓娃娃</h3>
+                </a>
+                <a id="overBtn" class="btn over-btn" href="javascript:void(0);">
+                    <h3>排队中...</h3>
+                </a>
+                <!--<span>前面0人等待</span>-->
+                <div class="my-money">
+                    <p>本次:
+                        <span id="costGold">99币</span>
+                    </p>
+                    <p>余额:
+                        <span id="myGold">99币</span>
+                    </p>
+                    <a id="recharge" class="recharge" href="javascript:void(0);">
+                        <i>+</i>&nbsp;&nbsp;&nbsp;&nbsp;去充值</a>
+                </div>
+                <div id="chatStateBtn" class="chat-state-btn"></div>
+            </div>
+            <div id="controlView" class="state2" style="display:none;">
+                <div class="direction-arr" id="controlNode">
+                    <a class="arr-left" type="l">
+                        <i></i>
+                    </a>
+                    <a class="arr-right" type="r">
+                        <i></i>
+                    </a>
+                    <a class="arr-top" type="u">
+                        <i></i>
+                    </a>
+                    <a class="arr-bottom" type="d">
+                        <i></i>
+                    </a>
+                </div>
+                <!--开始抓-->
+                <a id="catchBtn" class="catch-ico">
+                    <i class="border-line-1">
+                        <i class="catch-icon-cn"></i>
+                    </i>
+                    <!--<div class="circle-view"></div>-->
+                    <!--<div class="circle"><i id="leftCircle"></i></div>-->
+                    <!--<div class="circle"><i id="rightCircle"></i></div>-->
+                </a>
+                <!--<span>(0s)</span>-->
+            </div>
+            <!--倒计时-->
+            <div id="runTime" class="run-time"></div>
+            <!--等待结果文本-->
+            <div id="catchAwait" class="catch-await">已下抓，请等待游戏结果...</div>
+            <!--抓取列表-->
+            <div class="grab-list-wrap">
+                <div class="grab-list">
+                    <h3><span class="stateon">娃娃详情</span><span>最近抓取</span></h3>
+                    <div class="point-more-ul">
+                        <div class="point-more toy-detail">
+                            <h4></h4>
+                            <img class="toy-detail-img" src="">
+                        </div>
+                        <div class="point-more" style="display:none;">
+                            <ul id="grabList">
+                                <li>
+                                    <img src="public/img/1.jpg" />
+                                    <span>大大卷泡泡堂</span>
+                                    <time>25分钟前</time>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--抓取结果 失败&继续抓-->
+    <div id="breakDownView" class="pop-box" style="display:none;">
+        <div class="pop-result">
+            <i class="result-fail"></i>
+            <h3>只差那么一点点</h3>
+            <div class="btn-box">
+                <a class="pop-close" href="javascript:void(0);">无力再战</a>
+                <a class="pop-delay-close play-again" href="javascript:void(0);">再来一局(5s)</a>
+            </div>
+        </div>
+    </div>
+    <!--抓取结果 失败&充值-->
+    <div class="pop-box" style="display:none;">
+        <div class="pop-result">
+            <i class="result-fail"></i>
+            <h3>差一点点捉到，再玩一次</h3>
+            <div class="btn-box">
+                <a class="pop-close" href="javascript:void(0);">下次吧</a>
+                <a href="javascript:void(0);">去充值</a>
+            </div>
+        </div>
+    </div>
+    <!--抓取结果 成功-->
+    <div id="successView" class="pop-box" style="display:none;">
+        <div class="pop-result">
+            <span class="share_close"></span>
+            <i class="result-win"></i>
+            <h3>恭喜您成功抓到娃娃！</h3>
+            <div class="btn-box">
+                <a class="pop-share" href="javascript:void(0);">炫耀一下</a>
+                <a class="pop-delay-close play-again play-again-share" href="javascript:void(0);">再接再厉</a>
+            </div>
+        </div>
+    </div>
+    <!-- <audio id="backgroundMusic" autoplay loop src="<?=$config['pub_url'];?>backgroundmusic.ogg"></audio> -->
+    <!--<audio id="backgroundMusic" loop="loop" preload="auto">-->
+    <!--&lt;!&ndash;autoplay="autoplay"&ndash;&gt;-->
+    <!--<source src="public/backgroundmusic.mp3" type="audio/mpeg">-->
+    <!--您的浏览器不支持 audio 元素。-->
+    <!--</audio>-->
+</div>

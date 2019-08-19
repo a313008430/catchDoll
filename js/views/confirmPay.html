@@ -1,0 +1,57 @@
+<div id="contentView" class="mine-view">
+	<div class="back-box">
+		<span class="back-img"></span>
+		<h2>订单支付</h2>
+		<span></span>
+	</div>
+	<section>
+		<div style="padding:10px;">
+			<div class="address-info-box" style="margin:0;">
+				<!-- <a href="<?=site_url('User/address');?>">
+					<p><span>收货人：<?=$address[0]['name'];?></span><em><?=$address[0]['mobile'];?></em></p>
+					<h4>收货地址:<?=$address[0]['provinceId'];?><?=$address[0]['cityId'];?><?=$address[0]['districtId'];?><?=$address[0]['address'];?></h4>
+					<i></i>
+				</a> -->
+			</div>
+		</div>
+		<div class="pay-true-list">
+			<ul class="clearfix">
+				<!-- <?php
+						foreach($pMyData as $v){
+					?>
+					<li><img src="<?=$v['url'];?>" alt=""></li>
+					<?php					
+						}
+					?> -->
+			</ul>
+		</div>
+	</section>
+	<section class="bottom-box">
+		<div class="surplus-pay">
+			<label for="tick-pay" class="tick-on">
+				<h3>使用娃娃币支付</h3>
+				<h4>当前娃娃币：
+					<em id="playergold">
+					</em>币</h4>
+				<!-- 充值按钮 -->
+				<a id="expressPayBtn" class="top-up" style="display:none;">充值</a>
+				<!-- 使用余额复选框 -->
+				<input type="checkbox" id="tick-pay">
+				<i class="tick-pay" style="display:none;"></i>
+			</label>
+		</div>
+		<div class="confirm-box clearfix">
+			<h3>运费：
+				<em>
+					<!-- <?=$feight?> -->
+				</em>币</h3>
+			<!-- 可点击按钮 -->
+			<input class="true-button" type="button" value="支付" />
+			<!-- 不可点击按钮 -->
+			<!-- <input class="none-button" style="display:none;" type="button" value="支付" disabled="disabled" /> -->
+		</div>
+	</section>
+	<div class="pop-order-black" style="display:none;">
+		<p>订单支付成功！</p>
+	</div>
+</div>
